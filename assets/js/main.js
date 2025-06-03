@@ -893,7 +893,7 @@
         if (
           $(this).position().top <= $(document).scrollTop() &&
           $(this).position().top + $(this).outerHeight() >
-            $(document).scrollTop()
+          $(document).scrollTop()
         ) {
           var sec_id = $(this).data("secid");
 
@@ -955,18 +955,18 @@
         { start, end, param, onEnter, onLeave, onEnterBack, onLeaveBack }
       ) {
         let trackDirection = (animation) => {
-            let onUpdate = animation.eventCallback("onUpdate"),
-              prevTime = animation.time();
-            animation.direction = animation.reversed() ? -1 : 1;
-            animation.eventCallback("onUpdate", () => {
-              let time = animation.time();
-              if (prevTime !== time) {
-                animation.direction = time < prevTime ? -1 : 1;
-                prevTime = time;
-              }
-              onUpdate && onUpdate.call(animation);
-            });
-          },
+          let onUpdate = animation.eventCallback("onUpdate"),
+            prevTime = animation.time();
+          animation.direction = animation.reversed() ? -1 : 1;
+          animation.eventCallback("onUpdate", () => {
+            let time = animation.time();
+            if (prevTime !== time) {
+              animation.direction = time < prevTime ? -1 : 1;
+              prevTime = time;
+            }
+            onUpdate && onUpdate.call(animation);
+          });
+        },
           empty = (v) => v;
         timeline.direction || trackDirection(timeline);
         start >= 0 &&
@@ -1224,10 +1224,10 @@
     .querySelectorAll(".menu-anim > li > a")
     .forEach(
       (button) =>
-        (button.innerHTML =
-          '<div class="menu-text"><span>' +
-          button.textContent.split("").join("</span><span>") +
-          "</span></div>")
+      (button.innerHTML =
+        '<div class="menu-text"><span>' +
+        button.textContent.split("").join("</span><span>") +
+        "</span></div>")
     );
 
   setTimeout(() => {
@@ -2379,6 +2379,17 @@
     };
 
     var breakpointChecker = function () {
+      var pp_main = new Swiper(".portfolio__main-slider", {
+        allowTouchMove: false,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        effect: "fade",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+      },);
       if (breakpoint.matches === true) {
         if (pp_main !== undefined) pp_main.destroy(true, true);
         return;
@@ -4126,44 +4137,44 @@
   /////////////////////////////////////////////////
 
   /////////////////////////////////////////////////
-  var range_slider = $("#slider-range");
+  // var range_slider = $("#slider-range");
 
-  if (range_slider) {
-    $("#slider-range").slider({
-      range: true,
-      min: 0,
-      max: 6000,
-      values: [0, 6000],
-      slide: function (event, ui) {
-        $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-      },
-    });
-    $("#amount").val(
-      "$" +
-        $("#slider-range").slider("values", 0) +
-        " - $" +
-        $("#slider-range").slider("values", 1)
-    );
-  }
+  // if (range_slider) {
+  //   $("#slider-range").slider({
+  //     range: true,
+  //     min: 0,
+  //     max: 6000,
+  //     values: [0, 6000],
+  //     slide: function (event, ui) {
+  //       $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+  //     },
+  //   });
+  //   $("#amount").val(
+  //     "$" +
+  //       $("#slider-range").slider("values", 0) +
+  //       " - $" +
+  //       $("#slider-range").slider("values", 1)
+  //   );
+  // }
   /////////////////////////////////////////////////
 
   /////////////////////////////////////////////////
   //
-  $("#slider_range_2").slider({
-    range: true,
-    min: 0,
-    max: 6000,
-    values: [0, 6000],
-    slide: function (event, ui) {
-      $("#amount_2").val("$" + ui.values[0] + " - $" + ui.values[1]);
-    },
-  });
-  $("#amount_2").val(
-    "$" +
-      $("#slider_range_2").slider("values", 0) +
-      " - $" +
-      $("#slider_range_2").slider("values", 1)
-  );
+  // $("#slider_range_2").slider({
+  //   range: true,
+  //   min: 0,
+  //   max: 6000,
+  //   values: [0, 6000],
+  //   slide: function (event, ui) {
+  //     $("#amount_2").val("$" + ui.values[0] + " - $" + ui.values[1]);
+  //   },
+  // });
+  // $("#amount_2").val(
+  //   "$" +
+  //     $("#slider_range_2").slider("values", 0) +
+  //     " - $" +
+  //     $("#slider_range_2").slider("values", 1)
+  // );
   /////////////////////////////////////////////////
 
   /////////////////////////////////////////////////

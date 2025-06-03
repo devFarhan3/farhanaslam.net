@@ -27,8 +27,39 @@
   <link rel="stylesheet" href="assets/css/progressbar.css" />
   <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
   <link rel="stylesheet" href="assets/css/master.css" />
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>
+    /* portfolio images  */
+
+    .portfoliowrp .port-box ul li {
+      display: inline-block;
+      width: 24%;
+      transition: 1s cubic-bezier(.51, .92, .27, .96) !important;
+      box-shadow: -1px -2px 15px -3px rgb(0 0 0 / 16%);
+      border-radius: 20px;
+      margin: 0 4px;
+      height: 400px;
+      height: 400px;
+      overflow: hidden;
+      background-size: cover;
+      position: relative;
+    }
+
+    li.hk_web_height.lazy.tabs-web-dsgn:hover {
+      background-position: 100%;
+      transition: 3s !important;
+      transform: none;
+    }
+
+    .portfoliowrp .port-box ul li:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -246,7 +277,7 @@
                 </section>
               </div>
 
-              <div class="swiper-slide" >
+              <div class="swiper-slide d-none">
                 <section class="portfolio-section portfolio__project" id="portfolio">
                   <div class="container">
                     <div class="row">
@@ -312,7 +343,8 @@
                               <div class="swiper-slide pp-slide">
                                 <div class="pp-slide-img">
                                   <a href="https://dubaiwaterfronthouses.com/">
-                                    <img src="assets/imgs/portfolio/1/samana-developers-landingpage.png" alt="samana-developers" /></a>
+                                    <img src="assets/imgs/portfolio/1/samana-developers-landingpage.png"
+                                      alt="samana-developers" /></a>
                                 </div>
                               </div>
                             </div>
@@ -387,6 +419,63 @@
                   </div>
                 </section>
               </div>
+             <!-- new portfolio -->
+            <div class="swiper-slide">
+              
+              <section class="portfoliowrp pt-140 pb-140">
+                <div class="container">
+                  <li class="tabs ser-port current tabs-web-site wbport">
+
+                    <div class="ser-port tabs-custm-web wbport">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="port-box">
+                            <ul>
+                              <a data-fancybox="port"
+                                href="https://agilespike.com/demo/assets/lp/images/portfolios/construction/1.png"
+                                alt="t-1">
+                                <li class="hk_web_height lazy tabs-web-dsgn"
+                                  data-src="https://agilespike.com/demo/assets/lp/images/portfolios/construction/1.png"
+                                  alt="t-1" data-was-processed="true"
+                                  style="background-image: url(&quot;https://agilespike.com/demo/assets/lp/images/portfolios/construction/1.png&quot;);">
+                                </li>
+                              </a>
+                              <a data-fancybox="port" href="https://agilespike.com/demo/assets/lp/images/portfolios/construction/2.webp" alt="t-2">
+                                <li class="hk_web_height lazy tabs-web-dsgn"
+                                  data-src="https://agilespike.com/demo/assets/lp/images/portfolios/construction/2.webp" alt="t-2"
+                                  data-was-processed="true"
+                                  style="background-image: url(&quot;https://agilespike.com/demo/assets/lp/images/portfolios/construction/2.webp&quot;);">
+                                </li>
+                              </a>
+                              <a data-fancybox="port" href="https://agilespike.com/demo/assets/lp/images/portfolios/construction/3.webp" alt="t-3">
+                                <li class="hk_web_height lazy tabs-web-dsgn"
+                                  data-src="https://agilespike.com/demo/assets/lp/images/portfolios/construction/3.webp" alt="t-3"
+                                  data-was-processed="true"
+                                  style="background-image: url(&quot;https://agilespike.com/demo/assets/lp/images/portfolios/construction/3.webp&quot;);">
+                                </li>
+                              </a>
+                              <a data-fancybox="port"
+                                href="https://agilespike.com/demo/assets/lp/images/portfolios/finance/Finance-portfolio-4.webp" alt="t-4">
+                                <li class="hk_web_height lazy tabs-web-dsgn"
+                                  data-src="https://agilespike.com/demo/assets/lp/images/portfolios/finance/Finance-portfolio-4.webp" alt="t-4"
+                                  data-was-processed="true"
+                                  style="background-image: url(&quot;https://agilespike.com/demo/assets/lp/images/portfolios/finance/Finance-portfolio-4.webp&quot;);">
+                                </li>
+                              </a>
+                              
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  
+                  </li>
+                </div>
+
+              </section>
+              <!-- new portfolio ends -->
+            </div>
 
               <div class="swiper-slide">
                 <section class="portfolio-section portfolio__service pt-140 pb-140">
@@ -598,6 +687,7 @@
   </div>
 
   <!-- All JS files -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
@@ -611,8 +701,46 @@
   <script src="assets/js/mixitup.min.js"></script>
   <script src="assets/js/vanilla-tilt.js"></script>
   <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/main.js"></script>
 
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+      <script>
+        // Fancybox Config
+        $('[data-fancybox="port"]').fancybox({
+            buttons: [
+                "slideShow",
+                "thumbs",
+                "zoom",
+                "fullScreen",
+                "share",
+                "close"
+            ],
+            loop: false,
+            protect: true
+        });
+    </script>
+
+
+<script src="https://agilespike.com/demo/assets/js/lazyload.min.js"></script>
+
+<script>
+    $(function () {
+      var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
+       });
+    });
+    $(document).ready(function () {
+      $("[href]").each(function () {
+        if (this.href == window.location.href) {
+          $(this).addClass("active");
+        }
+      });
+    });
+  </script>
+
+    <script src="assets/js/main.js"></script>
 
 </body>
 
